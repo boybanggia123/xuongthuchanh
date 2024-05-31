@@ -1,0 +1,61 @@
+{
+  "newProducts": [
+    {
+      "id": 3,
+      "name": "Nghế học tập",
+      "image": "sofa.png",
+      "price": 320,
+      "quantity": 8,
+      "category_id": 3,
+      "create_at": "2024-03-21T06:28:09.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Bàn làm việc",
+      "image": "table.png",
+      "price": 540,
+      "quantity": 5,
+      "category_id": 1,
+      "create_at": "2024-03-21T06:28:09.000Z"
+    }
+  ],
+  "bestSellerProducts": [
+    {
+      "id": 1,
+      "name": "Bàn đa năng",
+      "image": "work desk.png",
+      "price": 610,
+      "quantity": 10,
+      "category_id": 1,
+      "create_at": "2024-03-05T06:28:09.000Z",
+      "discounted_price": 549
+    },
+    {
+      "id": 4,
+      "name": "Bàn làm việc",
+      "image": "p3.png",
+      "price": 540,
+      "quantity": 5,
+      "category_id": 1,
+      "create_at": "2024-03-21T06:28:09.000Z",
+      "discounted_price": 486
+    }
+  ],
+  "popularProducts": [
+    {
+      "id": 1,
+      "img": "ch.png",
+      "name": "Nghế thư giãn"
+    },
+    {
+      "id": 2,
+      "img": "work desk.png",
+      "name": "Sofa"
+    },
+    {
+      "id": 3,
+      "img": "sf.png",
+      "name": "Nghế làm việc"
+    }
+  ]
+}

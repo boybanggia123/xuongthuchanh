@@ -1,0 +1,89 @@
+ 
+ <%- include ('header.ejs')%>
+ <!-- card3 -->
+ <div class="container">
+    <h3 class="text-center" style="margin-top: 50px;"></h3>
+    <div class="row">
+        <div class="col-2 col-md-2">
+            <h3>Danh mục</h3>
+            <nav class="nav flex-column">
+                <a href="/allproduct" class="nav-link active ">Tất cả sản phẩm</a>
+                <% catalog.forEach (item=>{%>
+                <a class="nav-link " href="/allproduct/<%=item.id%>"><%=item.name%></a>
+                <%})%>
+              </nav>
+        </div>
+        <div class="col-10 col-md-10">
+          
+           <div class="row">
+            <div class="col">
+                <div class="mimg">
+                    <img src="/image/<%=productDetail.img%>" alt="">
+                </div>
+                
+            </div>
+            
+            <div class="col">
+                <div class="bang">
+                <h3 ><%=productDetail.name%></h3>
+                <p class="fs-4" style="color: red;" ><%=productDetail.price%> <sup>đ</sup></p>
+                <br>
+                <div class="inputn">
+                <input type="button" value="-">
+                <input type="" min="1" max="10" value="1">
+                <input type="button" value="+">
+            </div>
+                <div class="muab">
+                    <button class="btn btn-dark" type="button">Mua ngay</button>
+                    <button class="btn btn-outline-secondary" type="button">Thêm vào giỏ hàng</button>
+                   
+                </div>
+            </div>
+                <p class="motah fw-bolder fs-4">Mô tả sản phẩm</p>
+                <hr>
+                <div class="mota">
+                    <p><%=productDetail.describe%></p>
+                </div>
+            </div>
+           </div>
+       
+        </div>
+    </div>
+    
+</div>
+
+
+
+<!-- card3 -->
+<!-- khác -->
+<div class="container">
+    <h3 class="text-center" style="margin-top: 50px;">Có thể bạn cũng thích</h3>
+    <div class="row text-center khac">
+        <div class="col">
+            <img src="/image/p1.png" alt="">
+            <p class="card-text text-left">Sofa cao cấp</p>
+            <p class="card-text text-right" style="color: red;">$100.50</p>
+        </div>
+        <div class="col">
+            <img src="/image/card2.png" alt="">
+        
+            <p class="card-text text-left">Nghế thư giãn</p>
+            <p class="card-text text-right" style="color: red;">$100.50</p>
+        </div>
+        <div class="col">
+            <img src="/image/card3.png" alt="">
+            <p class="card-text text-left">Nghế học tập</p>
+            <p class="card-text text-right" style="color: red;">$100.50</p>
+        </div>
+        <div class="col">
+            <img src="/image/card4.png" alt="">
+        
+            <p class="card-text text-left">Nghế thư giãn</p>
+            <p class="card-text text-right" style="color: red;">$100.50</p>
+        </div>
+
+    </div>
+</div>
+<!-- khác -->
+
+<%- include ('footer.ejs')%>

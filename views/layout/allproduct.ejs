@@ -1,0 +1,82 @@
+<%- include ('header.ejs')%>
+  
+
+   <!-- card3 -->
+   <div class="container">
+    <h3 class="text-center" style="margin-top: 50px;">Tất cả sản phẩm</h3>
+    <div class="row">
+        <div class="col-2 col-md-2">
+            <h3>Danh mục</h3>
+            <nav class="nav flex-column">
+                <a href="/allproduct" class="nav-link active ">Tất cả sản phẩm</a>
+                <% catalog.forEach (item=>{%>
+                <a class="nav-link " href="/allproduct/<%=item.id%>"><%=item.name%></a>
+                <%})%>
+                <!-- <a class="nav-link" href="#">Mới nhất</a>
+                <a class="nav-link" href="#">Nghế ăn</a>
+                <a class="nav-link " href="#">Nghế thư dãn</a>
+                <a class="nav-link " href="#">Sofa</a> -->
+              </nav>
+        </div>
+        <div class="col-10 col-md-10">
+            <div class="row" style="margin-top: 50px;" id="">
+                <% products.forEach (item=>{%>
+                    <div class="col-md-3 py-3 py-md-2">
+                        <div class="card" id="c">
+                            <img src="/image/<%=item.img%>" alt="" class="card image-top">
+                            <div class="card-body">
+                                <h3 class="card-titel text-center">
+                                    <%=item.name%>
+                                </h3>
+                                <p class="card-text text-center">
+                                    <%=item.price%>đ</p>
+                                <div id="btn3"><a href="/detail/<%=item.id%>">Shop Now</a></div>
+                            </div>
+                        </div>
+                    </div>
+                <%})%>
+                
+            </div>
+        </div>
+    </div>
+   
+</div>
+<br>
+<div class="radio-input">
+  <label>
+  <input value="value-1" name="value-radio" id="value-1" type="radio" checked="">
+  <span>1</span>
+  </label>
+  <label>
+    <input value="value-2" name="value-radio" id="value-2" type="radio">
+  <span>2</span>
+  </label>
+  <label>
+    <input value="value-3" name="value-radio" id="value-3" type="radio">
+  <span>3</span>
+  </label>
+  <label>
+    <input value="value-3" name="value-radio" id="value-3" type="radio">
+  <span>4</span>
+  </label>
+  <span class="selection"></span>
+</div>
+<!-- card3 -->
+
+<!-- about -->
+<div class="container">
+    <h1 class="text-center" style="margin-top: 50px;">ABOUT</h1>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-md-6 py-3 py-md-0">
+            <div class="card">
+                <img src="/image/about.png" alt="">
+            </div>
+        </div>
+        <div class="col-md-6 py-3 py-md-0">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, saepe possimus quo, quasi animi natus nulla beatae neque soluta pariatur id ducimus eum, sed quis enim minima? Fugiat delectus quo optio nemo voluptatem ullam officiis neque exercitationem tenetur eum corporis quas in esse blanditiis, quasi animi nam eos! Tempora deleniti eligendi magni ex voluptatum ut dicta nemo et consequuntur distinctio quae atque porro inventore assumenda, nihil odio iusto accusamus libero error nam aut, at praesentium cum reiciendis. Possimus consequatur obcaecati at illum in dolores earum vero ipsum. Ipsam vitae adipisci corrupti totam vel consequuntur fugiat. Perferendis fuga doloremque tempora, in eos, voluptates iure, optio qui modi ex ea saepe. Eum perspiciatis, voluptates fugiat nesciunt corrupti minima aliquam repellat, ea quasi natus, recusandae aut nobis modi. Commodi, alias reiciendis reprehenderit hic soluta consectetur corporis accusantium placeat, totam minima nostrum magnam dolorum aut dolore, sapiente ea. Magni est quo ipsam nisi iste.</p>
+            <div id="btn4"><button>Read More...</button></div>
+        </div>
+    </div>
+</div>
+<!-- about -->
+<%- include ('footer.ejs')%>

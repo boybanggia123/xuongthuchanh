@@ -1,0 +1,120 @@
+ <%- include ('header.ejs')%>
+ 
+ <!-- banner -->
+ <div class="banner">
+    <div class="content">
+        <h1>Làm cho ngôi nhà của bạn 
+            <br> Thiết kế hiện đại hơn.
+        </h1>
+        <p></p>
+        <div id="btn1"><button>Mua ngay</button></div>
+      </div>
+</div>
+
+<!-- card1 -->
+<div class="container">
+    <h3 class="text-center" style="padding-top: 30px;">DỊCH VỤ CỦA CHÚNG TÔI</h3>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <img src="./image/c1.png" alt="" class="card image-top" height="200px">
+                <div class="card-body">
+                    <h5 class="card-titel text-center">Đồ trang trí</h5>
+                    <p class="text-center">Đồ trang trí không chỉ là những món đồ đơn thuần để trang trí không gian, mà còn là bí quyết tạo nên không gian sống sáng tạo và phản ánh cá tính của chủ nhân căn nhà. Dịch vụ đồ trang trí không chỉ đơn giản là cung cấp các sản phẩm trang trí mà còn mang đến các dịch vụ tư vấn, thiết kế và thi công để khách hàng có thể biến ý tưởng của mình thành hiện thực.</p>
+                    <div id="btn2" class="text-center"><button>Xem Thêm</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <img src="./image/c2.png" alt="" class="card image-top" height="200px">
+                <div class="card-body">
+                    <h5 class="card-titel text-center">Không gian phòng khách</h5>
+                    <p class="text-center">Việc trang trí phòng khách không chỉ là về việc chọn ghế sofa và bàn trà phù hợp. Nó là về cách tạo ra một không gian mà mọi người muốn dừng lại và thưởng thức. Dịch vụ trang trí phòng khách giúp biến ý tưởng thành hiện thực bằng cách sử dụng màu sắc, vật liệu và đồ trang trí phù hợp.</p>
+                    <div id="btn2" class="text-center"><button>Xem Thêm</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <img src="./image/c3.png" alt="" class="card image-top" height="200px">
+                <div class="card-body">
+                    <h5 class="card-titel text-center">Không gian phòng ngủ</h5>
+                    <p class="text-center">Phòng ngủ không chỉ đơn giản là nơi chúng ta nghỉ ngơi sau một ngày làm việc mệt mỏi, mà còn là nơi để tái tạo năng lượng, thư giãn và tận hưởng những giờ phút riêng tư. Với dịch vụ trang trí phòng ngủ, bạn có thể biến không gian này thành một nơi yên bình, thoải mái và đầy cảm hứng.</p>
+                    <div id="btn2" class="text-center"><button>Xem Thêm</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- card1 -->
+
+<!-- card2 -->
+<div class="container">
+    <div class="row" style="margin-top: 100px;">
+       <% catalogs.forEach(item =>{%>
+         <div class="col-md-4 py-3 py-md-0">
+            <div class="card " id="tpc">
+                <img src="./image/<%=item.img%>" alt="" class="card image-top">
+                <div class="card-img-overlay">
+                    <h4 class="card-titel"><%=item.name%></h4>
+                    <p class="card-text"></p>
+                    <div id="btn2"><button><a href="/allproduct/<%=item.id%>" >Xem Thêm</a></button></div>
+                </div>
+            </div>
+        </div>
+                <%})%>
+
+        <!--<div class="col-md-4 py-3 py-md-0">
+            <div class="card" id="tpc">
+                <img src="./image/work desk.png" alt="" class="card image-top">
+                <div class="card-img-overlay">
+                    <h4 class="card-titel">Bàn làm việc</h4>
+                    <p class="card-text"></p>
+                    <div id="btn2"><button>Xem Thêm</button></div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+<!-- card2 -->
+
+<!-- card3 -->
+<div class="container">
+    
+    <h3 class="text-center" style="margin-top: 50px;">SẢN PHẨM MỚI</h3>
+    <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3" style="margin-top: 50px;" >
+        <%newProducts.forEach(item=>{%>
+        <div class="col-md-3 py-3 py-md-2">
+            <div class="card" id="c">
+                <img src="/image/<%=item.img%>" alt="" class="card-image-top">
+                <div class="card-body">
+                    <h3 class="card-title text-center"><%=item.name%></h3>
+                    <p class="card-text text-center">$<%=item.price%></p>
+                    <div id="btn3"><button><a href="/detail/<%=item.id%>">Shop Now</a></button></div>
+                </div>
+            </div>
+        </div>
+        <%})%>
+    </div>
+</div>
+<!-- card3 -->
+
+<!-- about -->
+<div class="container">
+    <h1 class="text-center" style="margin-top: 50px;">Giới Thiệu</h1>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-md-6 py-3 py-md-0">
+            <div class="card">
+                <img src="./image/about.png" alt="">
+            </div>
+        </div>
+        <div class="col-md-6 py-3 py-md-0">
+            <p>Nếu khách hàng rất thông minh, họ sẽ có thể đạt được kết quả mong muốn. Trong công việc, chúng ta thường có thể làm được, hầu như việc sinh ra của một linh hồn không được ban phúc cũng không được giải thoát, mà chúng ta dẫn dắt, nhưng ai là người nhỏ bé nhất? Hãy để người được chọn chạy trốn, theo lựa chọn đó, không ai có được niềm vui nào trong văn phòng, cũng như anh ta không bị ràng buộc bởi sự nịnh nọt của cơ thể, vốn có trong con người anh ta, nhưng hầu hết là của tâm trí dành cho họ! Thời đại của sự dịu dàng trong việc lựa chọn điều vĩ đại từ những thú vui mà không ai đề cập đến và xuất phát từ sự khác biệt và giả định xa hơn, chúng ta không buộc tội gì chỉ với lòng căm thù những lỗi lầm tự do, mà là với sự từ chối hiện tại. Chúng ta có thể bị mù quáng bởi kết quả, nhưng anh ấy thực sự đang ở trong nỗi đau của họ. Sơ yếu lý lịch của bạn bị hủy hoại hoàn toàn và kết quả là bạn phải bỏ chạy. Bằng cách chịu đựng những khoảng thời gian trốn chạy và đau đớn, trong đó là niềm vui của lẽ phải, sự lựa chọn của những người thường thoát ra khỏi nó. Nếu bạn nhìn vào anh ta, anh ta không biết cách chạy trốn khỏi những thú vui, chúng đẩy lùi một số tham nhũng tối thiểu, chúng gần như tự nhiên, bị từ chối hoặc đối với chúng ta. An ủi, bằng cách từ chối những người khác mà anh ta chỉ trích, ở đây anh ta mất đi hậu quả của thân xác của những người tố cáo, làm hài lòng mọi nỗi đau hay nỗi đau nhỏ nhất của chúng ta, khôn ngoan cho họ. Thật tuyệt vời khi cô ấy chứ không phải anh ấy.</p>
+            <div id="btn4"><button>Đọc Thêm...</button></div>
+        </div>
+    </div>
+</div>
+<!-- about -->
+
+<%- include ('footer.ejs')%>
